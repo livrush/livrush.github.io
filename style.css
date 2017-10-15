@@ -1,0 +1,109 @@
+@keyframes spin {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}
+
+@keyframes float {
+    0% { transform: translateY(-100%) rotate(0deg) }
+    50% { transform: translateY(100%) rotate(-180deg) }
+    100% { transform: translateY(-100%) rotate(-360deg) }
+}
+
+body {
+    margin: 0;
+    font-family: futura;
+}
+
+h1 {
+    margin: 0;
+    font-size: 7.5vh;
+}
+
+.top, .bottom {
+    padding: 0 7.5%;
+    width: 100%;    
+    box-sizing: border-box;
+}
+
+.top {
+    background: #FFF796;
+    height: 80vh;
+    display: flex;
+}
+
+.left, .right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    justify-content: center;
+    position: relative;
+}
+
+.milk {
+    height: 50vh;
+    position: absolute;
+}
+
+.spin {
+    width: 15vh;
+    height: 15vh;
+    /* background: #55B7FF; */
+    animation: spin 14s infinite linear;
+}
+
+.triangle {
+    width: 15vh;
+    height: 12.99vh;
+    background:#FF559D;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    animation: float 2s infinite linear;  
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.triangle > .circle {
+    margin-top: 27px;    
+}
+
+.bottom {
+    background: #FF559D;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+}
+
+.icons > .circle {
+    margin-right: 5vh;    
+}
+
+.circle {
+    font-size: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7.5vh;
+    width: 7.5vh;
+    background: #FFF796;
+    border-radius: 100%;
+}
+
+.c {
+    color: #55B7FF;
+}
+
+.m {
+    color: #FF559D;
+}
+
+.y {
+    color: #FFF796;
+}
