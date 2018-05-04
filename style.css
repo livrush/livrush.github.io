@@ -21,14 +21,16 @@ h1 {
 
 .top, .bottom {
     padding: 0 7.5%;
-    width: 100%;    
+    width: 100%;
     box-sizing: border-box;
 }
 
 .top {
     background: #FFF796;
-    height: 80vh;
+    min-height: 90vh;
     display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .left, .right {
@@ -44,8 +46,9 @@ h1 {
 
 .milk {
     height: 50vh;
-    position: absolute;
+    /* position: absolute; */
 }
+
 
 .spin {
     width: 15vh;
@@ -57,19 +60,19 @@ h1 {
 .triangle {
     width: 15vh;
     display: flex;
-    height: 12.99vh;
+    /* height: 12.99vh; */
     align-items: center;
     justify-content: center;
-    animation: float 2s infinite linear;  
+    animation: float 2s infinite linear;
 }
 
 .triangle > .circle {
-    margin-top: 27px;    
+    margin-top: 27px;
 }
 
 .bottom {
     background: #FF559D;
-    height: 20vh;
+    height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,16 +83,16 @@ h1 {
 }
 
 .icons > .circle {
-    margin-right: 5vh;    
+    margin: 2.5vh;
 }
 
 .circle {
-    font-size: 4vh;
+    font-size: 3vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 7.5vh;
-    width: 7.5vh;
+    height: 6vh;
+    width: 6vh;
     background: #FFF796;
     border-radius: 100%;
 }
@@ -108,4 +111,35 @@ h1 {
 
 .y {
     color: #FFF796;
+}
+
+
+@media (max-width: 768px) {
+    .top {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .milk {
+        height: 30vh;
+    }
+
+    .spin {
+        height: 9vh;
+        width: 9vh;
+    }
+
+    .triangle {
+        width: 9vh;
+    }
+
+    .icons {
+        justify-content: space-between;
+        width: 100%;
+    }
+
 }
