@@ -56,13 +56,11 @@ h1 {
 
 .triangle {
     width: 15vh;
-    height: 12.99vh;
-    background:#FF559D;
-    clip-path: polygon(50% 0, 0 100%, 100% 100%);
-    animation: float 2s infinite linear;  
     display: flex;
+    height: 12.99vh;
+    align-items: center;
     justify-content: center;
-    align-items: center;  
+    animation: float 2s infinite linear;  
 }
 
 .triangle > .circle {
@@ -94,6 +92,10 @@ h1 {
     width: 7.5vh;
     background: #FFF796;
     border-radius: 100%;
+}
+
+.circle img {
+    height: 4vh;
 }
 
 .c {
