@@ -9,6 +9,10 @@
     100% { transform: translateY(-100%) rotate(-360deg) }
 }
 
+html {
+    background: #55B7FF;
+}
+
 body {
     margin: 0;
     font-family: futura;
@@ -53,14 +57,12 @@ h1 {
 .spin {
     width: 15vh;
     height: 15vh;
-    /* background: #55B7FF; */
     animation: spin 14s infinite linear;
 }
 
 .triangle {
     width: 15vh;
     display: flex;
-    /* height: 12.99vh; */
     align-items: center;
     justify-content: center;
     animation: float 2s infinite linear;
@@ -118,6 +120,7 @@ h1 {
     .top {
         flex-direction: column-reverse;
         justify-content: space-around;
+        min-height: 80vh;
     }
 
     .left, .right {
