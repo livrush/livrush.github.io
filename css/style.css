@@ -15,7 +15,7 @@ body {
 }
 
 .top {
-    overflow: scroll;
+    overflow: hidden;
     background: #FFF796;
     min-height: 90vh;
     padding: 0;
@@ -25,6 +25,12 @@ body {
 
 .projects-container {
     display: flex;
+    /* transition: 1s; */
+}
+
+.projects-container,
+.display-main,
+.display-main-section {
     transition: 1s;
 }
 
