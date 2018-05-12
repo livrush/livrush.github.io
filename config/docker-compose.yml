@@ -1,9 +1,0 @@
-version: "2"
-services:
-  server:
-    image: livrush/pafiume
-    ports:
-      - 80:80
-    environment:
-      - PORT=80
-      - HOST=localhost
