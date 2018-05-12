@@ -14,7 +14,9 @@
   },
   "author": "Olivia Sabo-Rush",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
   "devDependencies": {
     "gulp": "^3.9.1"
   }
