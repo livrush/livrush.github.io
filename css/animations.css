@@ -1,0 +1,10 @@
+@keyframes spin {
+  0%   { transform: rotate(000deg) }
+  100% { transform: rotate(360deg) }
+}
+
+@keyframes float {
+  0%   { transform: translateY(-100%) rotate( 000deg) }
+  50%  { transform: translateY( 100%) rotate(-180deg) }
+  100% { transform: translateY(-100%) rotate(-360deg) }
+}
