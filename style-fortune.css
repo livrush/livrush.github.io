@@ -1,0 +1,46 @@
+.fortune {
+  background: #FF559D;
+  border-radius: 5px;
+  color: #FFF796;
+  height: 350px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  width: 250px;
+}
+
+.fortune-inner {
+  border: 3px solid #FFF796;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.flair {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+}
+
+.flair.up { top: 10px; }
+.flair.right { right: 10px; }
+.flair.down { bottom: 10px; }
+.flair.left { left: 10px; }
+
+.flair, .emblem {
+  background: #FFF796;
+  border-radius: 50%;
+}
+
+.emblem {
+  margin: 0 auto;
+  font-size: 6em;
+  height: 125px;
+  width: 125px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hr-fortune { border: #FFF796 1.5px solid; }
