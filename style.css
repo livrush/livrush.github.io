@@ -18,10 +18,7 @@ body {
     font-family: futura;
 }
 
-h1 {
-    margin: 0;
-    font-size: 7.5vh;
-}
+
 
 .top, .bottom {
     width: 100vw;
@@ -39,15 +36,36 @@ h1 {
 
 .display-main {
     display: flex;
-    min-width: 100vw;
     position: relative;
 }
+.display-main.full {
+    min-width: 100vw;
+}
+.display-main.half {
+    min-width: 50vw;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+}
 
-.display-main-half {
-    width: 50%;
+
+.display-main-section {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.display-main-section.half {
+    width: 50%;
+}
+.display-main-section.full {
+    width: 100%;
+}
+
+.display-main-section-header {
+    margin: 0;
+    font-size: 7.5vh;
+}
+.display-main-section.full .display-main-section-header {
+    font-size: 6vh;
 }
 
 .right {
@@ -62,24 +80,34 @@ h1 {
     justify-content: center;
 }
 
+
 .milk {
     height: 50vh;
     position: absolute;
 }
-
-
 .spin {
     width: 15vh;
     height: 15vh;
     animation: spin 14s infinite linear;
 }
-
 .triangle {
     width: 15vh;
     display: flex;
     align-items: center;
     justify-content: center;
     animation: float 2s infinite linear;
+}
+
+
+.display-main-section.full .milk {
+    height: 30vh;
+}
+.display-main-section.full .spin {
+    height: 9vh;
+    width: 9vh;
+}
+.display-main-section.full .triangle {
+    width: 9vh;
 }
 
 .triangle > .circle {
@@ -144,6 +172,10 @@ h1 {
     .display-main {
         flex-direction: column-reverse;
         justify-content: space-around;
+    }
+
+    .display-main.half {
+        min-width: 100vw;
     }
 
     .project,
