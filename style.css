@@ -40,6 +40,7 @@ h1 {
 .display-main {
     display: flex;
     min-width: 100vw;
+    position: relative;
 }
 
 .display-main-half {
