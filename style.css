@@ -24,27 +24,41 @@ h1 {
 }
 
 .top, .bottom {
-    padding: 0 7.5%;
-    width: 100%;
+    width: 100vw;
     box-sizing: border-box;
 }
 
 .top {
+    overflow: scroll;
     background: #FFF796;
     min-height: 90vh;
-    display: flex;
+    padding: 0;
     padding-top: 30px;
+    display: flex;
 }
 
-.left, .right {
+.display-main {
+    display: flex;
+    min-width: 100vw;
+}
+
+.display-main-half {
     width: 50%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .right {
     justify-content: center;
     position: relative;
+}
+
+.project {
+    min-width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .milk {
@@ -75,6 +89,7 @@ h1 {
     background: #FF559D;
     height: 10vh;
     display: flex;
+    padding: 0 7.5%;
     justify-content: space-between;
     align-items: center;
 }
@@ -122,13 +137,17 @@ h1 {
 
 @media (max-width: 768px) {
     .top {
-        flex-direction: column-reverse;
-        justify-content: space-around;
         min-height: 80vh;
     }
 
-    .left, .right {
-        width: 100%;
+    .display-main {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+    }
+
+    .project,
+    .display-main-half {
+        min-width: 100vw;
     }
 
     .milk {
