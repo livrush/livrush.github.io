@@ -23,6 +23,11 @@ body {
     display: flex;
 }
 
+.projects-container {
+    display: flex;
+    transition: 1s;
+}
+
 .display-main {
     display: flex;
     position: relative;
