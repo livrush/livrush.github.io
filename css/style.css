@@ -29,10 +29,10 @@ body {
 }
 
 .project-svg {
-    height: 50vh;
-    width: 50vw;
-    max-height: 50vh;
-    max-width: 50vw;
+    height: 50vmin;
+    width: 50vmin;
+    max-height: 50vmin;
+    max-width: 50vmin;
 }
 
 .projects-container,
