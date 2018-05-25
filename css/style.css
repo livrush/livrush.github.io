@@ -132,6 +132,7 @@ body {
     width: 6vh;
     background: #FFF796;
     border-radius: 100%;
+    cursor: pointer;
 }
 .circle img {
     height: 4vh;
