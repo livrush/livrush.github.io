@@ -6,19 +6,20 @@ const getScreenWidth = () => window.innerWidth;
 
 $(document).ready(function() {
   $('#slide-left').click(function() {
-    const screenWidth = getScreenWidth();
-    horizontalSlide -= 100;
-    $('.projects-container').css({
-      transform: `translateX(-${horizontalSlide}vw)`,
-    });
-    console.log('horizontal placement is:', horizontalSlide);
+    if (horizontalSlide) {
+      horizontalSlide -= 1;
+      $('.projects-container').css({
+        transform: `translateX(-${horizontalSlide * 100}vw)`,
+      });
+      console.log('horizontal placement is:', horizontalSlide);
+    }
   });
 
   $('#slide-right').click(function() {
     const screenWidth = getScreenWidth();
-    horizontalSlide += 100;
+    horizontalSlide += 1;
     $('.projects-container').css({
-      transform: `translateX(-${horizontalSlide}vw)`,
+      transform: `translateX(-${horizontalSlide * 100}vw)`,
     });
     console.log('horizontal placement is:', horizontalSlide);
   });
@@ -29,7 +30,7 @@ $(document).ready(function() {
     else verticalSlide += 100;
 
     $('.projects-container').css({
-      transform: `translateX(-${horizontalSlide}vw) translateY(-${verticalSlide}vw)`,
+      transform: `translateX(-${horizontalSlide}vw) translateY(-${verticalSlide}vh)`,
     });
     console.log('vertical placement is:', verticalSlide);
   });
