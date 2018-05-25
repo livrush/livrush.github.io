@@ -112,7 +112,7 @@ body {
     height: 10vh;
     display: flex;
     padding: 0 7.5%;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -157,6 +157,14 @@ body {
 
     .display-main.half {
         min-width: 100vw;
+    }
+
+    .display-main-section.half {
+        min-width: 100%;
+    }
+
+    .display-main-section-header {
+        font-size: 6vh;
     }
 
     .project,
