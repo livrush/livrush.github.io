@@ -16,11 +16,11 @@ const getScreenWidth = () => window.innerWidth;
 
 const slide = (horizontalSlide, verticalSlide) => {
   $('.projects-container').css({
-    transform: `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}vh)`,
-    '-webkit-transform': `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}vh)`,
-    '-moz-transform': `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}vh)`,
-    '-o-transform': `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}vh)`,
-    '-ms-transform': `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}vh)`,
+    transform: `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}%)`,
+    '-webkit-transform': `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}%)`,
+    '-moz-transform': `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}%)`,
+    '-o-transform': `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}%)`,
+    '-ms-transform': `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}%)`,
   });
 }
 
@@ -58,19 +58,15 @@ $(document).ready(function() {
   });
 
   // TODO: update style so this is worth having //
-  // $('#slide-info').click(function() {
-  //   if (verticalSlide) verticalSlide += 1;
-  //   else verticalSlide -= 1;
-  //   slide(horizontalSlide, verticalSlide);
-
-  //   $('.projects-container').css({
-  //     transform: `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}vh)`,
-  //   });
-  //   console.group('info');
-  //   console.log('horizontal placement is:', horizontalSlide);
-  //   console.log('vertical placement is:', verticalSlide);
-  //   console.groupEnd();
-  // });
+  $('#slide-info').click(function() {
+    if (verticalSlide) verticalSlide += 1;
+    else verticalSlide -= 1;
+    slide(horizontalSlide, verticalSlide);
+    console.group('info');
+    console.log('horizontal placement is:', horizontalSlide);
+    console.log('vertical placement is:', verticalSlide);
+    console.groupEnd();
+  });
 
   $(window).on('keyup', (event) => {
     console.log(event.key, event.keyCode);
