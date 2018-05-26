@@ -1,5 +1,6 @@
 let horizontalSlide = 0;
 let verticalSlide = 0;
+let lastPanTimeStamp = 0;
 
 const projects = [
   'fortune',
@@ -89,5 +90,19 @@ $(document).ready(function() {
     else if (event.keyCode === 38) $('#slide-info').click();
     else if (event.keyCode === 39) $('#slide-right').click();
     else if (event.keyCode === 40) $('#slide-info').click();
+  });
+
+  $(window).hammer().bind('panleft', (event) => {
+    if (event.timeStamp - lastPanTimeStamp > 500) {
+      $('#slide-right').click();
+      lastPanTimeStamp = event.timeStamp;
+    }
+  });
+
+  $(window).hammer().bind('panright', (event) => {
+    if (event.timeStamp - lastPanTimeStamp > 500) {
+      $('#slide-left').click();
+      lastPanTimeStamp = event.timeStamp;
+    };
   });
 });
