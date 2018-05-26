@@ -1,6 +1,14 @@
 let horizontalSlide = 0;
 let verticalSlide = 0;
 
+const projects = [
+  'fortune',
+  'kana-prac',
+  'ali-gle',
+  'pafiume-cast',
+  'pafiume-colors',
+  'browser-gimei',
+];
 
 const getScreenWidth = () => window.innerWidth;
 
@@ -21,21 +29,21 @@ $(document).ready(function() {
   });
 
   $('#slide-right').click(function() {
-    const screenWidth = getScreenWidth();
-    horizontalSlide -= 1;
-    verticalSlide = 0;
-    $('.projects-container').css({
-      // transform: `translateX(-${horizontalSlide * 100}vw)`,
-      transform: `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}vh)`,
-    });
-    console.group('right');
-    console.log('horizontal placement is:', horizontalSlide);
-    console.log('vertical placement is:', verticalSlide);
-    console.groupEnd();
+    if (horizontalSlide * -1 < projects.length - 1) {
+      horizontalSlide -= 1;
+      verticalSlide = 0;
+      $('.projects-container').css({
+        // transform: `translateX(-${horizontalSlide * 100}vw)`,
+        transform: `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}vh)`,
+      });
+      console.group('right');
+      console.log('horizontal placement is:', horizontalSlide);
+      console.log('vertical placement is:', verticalSlide);
+      console.groupEnd();
+    };
   });
 
   $('#slide-info').click(function() {
-    const screenWidth = getScreenWidth();
     if (verticalSlide) verticalSlide += 1;
     else verticalSlide -= 1;
 
