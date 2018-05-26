@@ -165,18 +165,13 @@ body {
 }
 
 .septagon.bullet {
-    margin-left: -6vh;
+    /* margin-left: -6vh; */
     margin-right: 2vh;
 }
 
 .septagon.c { background-image: url(/assets/svg/septagon-c.svg); }
 .septagon.m { background-image: url(/assets/svg/septagon-m.svg); }
 .septagon.y { background-image: url(/assets/svg/septagon-y.svg); }
-
-/* .septagon > img {
-    height: 60%;
-    width: 60%;
-} */
 
 .simple-column {
     display: flex;

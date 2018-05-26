@@ -79,6 +79,14 @@ $(document).ready(function() {
     else if (event.keyCode === 40) $('#slide-info').click();
   });
 
+  // $(window).scroll(event => {
+  //   console.log(event);
+  //   // if (event.timeStamp - lastPanTimeStamp > 500) {
+  //     $('#slide-right').click();
+  //     // lastPanTimeStamp = event.timeStamp;
+  //   // }
+  // });
+
   $(window).hammer().bind('panleft', (event) => {
     if (event.timeStamp - lastPanTimeStamp > 500) {
       $('#slide-right').click();
