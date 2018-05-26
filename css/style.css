@@ -7,25 +7,43 @@ body {
     font-family: futura;
 }
 
+header {
+    background: #55B7FF;
+    top: 0;
+}
 
+footer {
+    background: #FF559D;
+    bottom: 0;
+}
 
-.top, .bottom {
+header,
+footer {
+    height: 10vh;
+    display: flex;
+    padding: 0 7.5%;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+header,
+main,
+footer {
     width: 100vw;
     box-sizing: border-box;
 }
 
-.top {
+main {
     overflow: hidden;
     background: #FFF796;
-    min-height: 90vh;
+    min-height: 100vh;
     padding: 0;
-    padding-top: 30px;
     display: flex;
 }
 
 .projects-container {
     display: flex;
-    /* transition: 1s; */
 }
 
 .project-svg {
@@ -52,15 +70,9 @@ body {
 .display-main {
     display: flex;
     position: relative;
-    flex-flow: wrap;
 }
-.display-main.full {
+.display-main {
     min-width: 100vw;
-}
-.display-main.half {
-    min-width: 50vw;
-    flex-direction: column-reverse;
-    justify-content: space-around;
 }
 
 
@@ -68,23 +80,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.display-main-section.half,
-.display-main-section.full {
-    min-height: 100%;
-}
-.display-main-section.half {
     min-width: 50vw;
 }
-.display-main-section.full {
-    min-width: 100vw;
+.display-main-section {
+    min-height: 100%;
 }
 
 .display-main-section-header {
     margin: 0;
     font-size: 7.5vh;
 }
-.display-main-section.full .display-main-section-header {
+.display-main-section,
+.display-main-section-header {
     font-size: 6vh;
 }
 
@@ -131,17 +138,6 @@ body {
     width: 9vh;
 }
 
-
-.bottom {
-    background: #FF559D;
-    height: 10vh;
-    display: flex;
-    padding: 0 7.5%;
-    justify-content: center;
-    align-items: center;
-}
-
-
 .icons {
     display: flex;
 }
@@ -178,7 +174,6 @@ body {
 }
 
 .septagon.bullet {
-    /* margin-left: -6vh; */
     margin-right: 2vh;
 }
 
@@ -186,32 +181,14 @@ body {
 .septagon.m { background-image: url(/assets/svg/septagon-m.svg); }
 .septagon.y { background-image: url(/assets/svg/septagon-y.svg); }
 
-.simple-column {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.simple-row {
-    display: flex;
-    align-items: center;
-}
-
 @media (max-width: 768px) {
-    .top {
-        min-height: 80vh;
-    }
-
     .display-main {
         flex-direction: column-reverse;
         justify-content: space-around;
-    }
-
-    .display-main.half {
         min-width: 100vw;
     }
 
-    .display-main-section.half {
+    .display-main-section{
         min-width: 100%;
     }
 
@@ -241,5 +218,4 @@ body {
         justify-content: space-between;
         width: 100%;
     }
-
 }

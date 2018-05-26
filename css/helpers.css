@@ -7,3 +7,14 @@
 .margin-bottom { margin-bottom: 3vh; }
 .margin-bottom { margin-bottom: 3vh; }
 .margin-left { margin-left: 3vh; }
+
+.simple-column {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.simple-row {
+  display: flex;
+  align-items: center;
+}
