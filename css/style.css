@@ -102,6 +102,12 @@ body {
 }
 
 
+.link {
+    font-size: 4vh;
+    margin: 0;
+    margin-top: 3vh;
+}
+
 .display-main-section.full .milk {
     height: 30vh;
 }
@@ -127,9 +133,14 @@ body {
 .icons {
     display: flex;
 }
+.icons > .septagon,
 .icons > .circle {
     margin: 2.5vh;
+    height: 6vh;
+    width: 6vh;
+    cursor: pointer;
 }
+.septagon,
 .circle {
     font-size: 3vh;
     display: flex;
@@ -137,11 +148,10 @@ body {
     align-items: center;
     height: 6vh;
     width: 6vh;
-    background: #FFF796;
-    border-radius: 100%;
-    cursor: pointer;
 }
-.circle img {
+
+.circle img,
+.septagon img {
     height: 4vh;
 }
 
@@ -149,10 +159,35 @@ body {
 .circle.m { background-color: #FF559D; }
 .circle.y { background-color: #FFF796; }
 
+.septagon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.septagon.bullet {
+    margin-left: -6vh;
+    margin-right: 2vh;
+}
+
+.septagon.c { background-image: url(/assets/svg/septagon-c.svg); }
+.septagon.m { background-image: url(/assets/svg/septagon-m.svg); }
+.septagon.y { background-image: url(/assets/svg/septagon-y.svg); }
+
+/* .septagon > img {
+    height: 60%;
+    width: 60%;
+} */
+
 .simple-column {
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+
+.simple-row {
+    display: flex;
+    align-items: center;
 }
 
 @media (max-width: 768px) {
