@@ -7,11 +7,11 @@ const getScreenWidth = () => window.innerWidth;
 $(document).ready(function() {
   $('#slide-left').click(function() {
     if (horizontalSlide) {
-      horizontalSlide -= 1;
+      horizontalSlide += 1;
       verticalSlide = 0;
       $('.projects-container').css({
         // transform: `translateX(-${horizontalSlide * 100}vw)`,
-        transform: `translate(-${horizontalSlide * 100}vw, ${verticalSlide}vh)`,
+        transform: `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}vh)`,
       });
       console.group('left');
       console.log('horizontal placement is:', horizontalSlide);
@@ -22,11 +22,11 @@ $(document).ready(function() {
 
   $('#slide-right').click(function() {
     const screenWidth = getScreenWidth();
-    horizontalSlide += 1;
+    horizontalSlide -= 1;
     verticalSlide = 0;
     $('.projects-container').css({
       // transform: `translateX(-${horizontalSlide * 100}vw)`,
-      transform: `translate(-${horizontalSlide * 100}vw, ${verticalSlide}vh)`,
+      transform: `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}vh)`,
     });
     console.group('right');
     console.log('horizontal placement is:', horizontalSlide);
@@ -36,11 +36,11 @@ $(document).ready(function() {
 
   $('#slide-info').click(function() {
     const screenWidth = getScreenWidth();
-    if (verticalSlide) verticalSlide -= 100;
-    else verticalSlide += 100;
+    if (verticalSlide) verticalSlide += 1;
+    else verticalSlide -= 1;
 
     $('.projects-container').css({
-      transform: `translate(-${horizontalSlide * 100}vw, -${verticalSlide}vh)`,
+      transform: `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}vh)`,
     });
     console.group('info');
     console.log('horizontal placement is:', horizontalSlide);
