@@ -1,22 +1,26 @@
 html {
     background: #55B7FF;
 }
-
 body {
     margin: 0;
     font-family: futura;
 }
-
 header {
     background: #55B7FF;
     top: 0;
+    z-index: 5;
 }
-
+main {
+    overflow: hidden;
+    background: #FFF796;
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+}
 footer {
     background: #FF559D;
     bottom: 0;
 }
-
 header,
 footer {
     height: 10vh;
@@ -26,7 +30,6 @@ footer {
     justify-content: center;
     align-items: center;
 }
-
 header,
 main,
 footer {
@@ -34,58 +37,24 @@ footer {
     box-sizing: border-box;
 }
 
-main {
-    overflow: hidden;
-    background: #FFF796;
-    min-height: 100vh;
-    padding: 0;
-    display: flex;
-}
+/* BASIC SKELETON */
 
 .projects-container {
     display: flex;
-}
-
-.project-svg {
-    height: 50vmin;
-    width: 50vmin;
-    max-height: 50vmin;
-    max-width: 50vmin;
-}
-
-.project-svg-preview {
-    height: 15vmin;
-    width: 15vmin;
-    max-height: 15vmin;
-    max-width: 15vmin;
-    margin: 3vmin;
-}
-
-.projects-container,
-.display-main,
-.display-main-section {
     transition: 1s;
 }
-
 .display-main {
     display: flex;
+    min-width: 100vw;
     position: relative;
 }
-.display-main {
-    min-width: 100vw;
-}
-
-
 .display-main-section {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
+    min-height: 100%;
     min-width: 50vw;
 }
-.display-main-section {
-    min-height: 100%;
-}
-
 .display-main-section-header {
     margin: 0;
     font-size: 7.5vh;
@@ -95,122 +64,70 @@ main {
     font-size: 6vh;
 }
 
+/* SEPTAGON */
 
-.project {
-    min-width: 50vw;
-    display: flex;
+.septagon {
     align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    font-size: 3vh;
+    height: 6vh;
     justify-content: center;
+    width: 6vh;
 }
-
-
-.milk {
-    height: 50vh;
-    position: absolute;
-}
-.spin {
+.septagon.c { background-image: url("/assets/svg/septagon-c.svg"); }
+.septagon.m { background-image: url("/assets/svg/septagon-m.svg"); }
+.septagon.y { background-image: url("/assets/svg/septagon-y.svg"); }
+.septagon-spin {
     width: 15vh;
     height: 15vh;
     animation: spin 14s infinite linear;
 }
-.triangle {
+.septagon-twirl {
     width: 15vh;
     display: flex;
     align-items: center;
     justify-content: center;
     animation: float 2s infinite linear;
 }
-
-
-.link {
-    font-size: 4vh;
-    margin: 0;
+.septagon.bullet {
+    margin-right: 2vh;
 }
 
-.display-main-section.full .milk {
-    height: 30vh;
-}
-.display-main-section.full .spin {
-    height: 9vh;
-    width: 9vh;
-}
-.display-main-section.full .triangle {
-    width: 9vh;
-}
+/* ICONS */
 
 .icons {
     display: flex;
 }
-.icons > .septagon,
-.icons > .circle {
+.icons > .septagon {
     margin: 2.5vh;
     height: 6vh;
     width: 6vh;
     cursor: pointer;
 }
-.septagon,
-.circle {
-    font-size: 3vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6vh;
-    width: 6vh;
-}
-
-.circle img,
-.septagon img {
-    height: 4vh;
-}
-
-.circle.c { background-color: #55B7FF; }
-.circle.m { background-color: #FF559D; }
-.circle.y { background-color: #FFF796; }
-
-.septagon {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.septagon.bullet {
-    margin-right: 2vh;
-}
-
-.septagon.c { background-image: url(/assets/svg/septagon-c.svg); }
-.septagon.m { background-image: url(/assets/svg/septagon-m.svg); }
-.septagon.y { background-image: url(/assets/svg/septagon-y.svg); }
 
 @media (max-width: 768px) {
     .display-main {
         flex-direction: column-reverse;
-        justify-content: space-around;
+        justify-content: center;
         min-width: 100vw;
     }
-
     .display-main-section{
+        height: 40vh;
+        min-height: auto;
         min-width: 100%;
     }
-
     .display-main-section-header {
         font-size: 6vh;
     }
 
-    .project,
-    .display-main-half {
-        min-width: 100vw;
-    }
-
-    .milk {
-        height: 30vh;
-    }
-
-    .spin {
+    .septagon-spin {
         height: 9vh;
         width: 9vh;
     }
-
-    .triangle {
+    .septagon-twirl {
         width: 9vh;
     }
 

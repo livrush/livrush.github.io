@@ -18,3 +18,27 @@
   display: flex;
   align-items: center;
 }
+
+.absolute {
+  position: absolute;
+}
+
+.link {
+  font-size: 4vh;
+  margin: 0;
+}
+
+.project-svg {
+  height: 50vmin;
+  width: 50vmin;
+  max-height: 50vmin;
+  max-width: 50vmin;
+}
+
+.project-svg-preview {
+  height: 15vmin;
+  width: 15vmin;
+  max-height: 15vmin;
+  max-width: 15vmin;
+  margin: 3vmin;
+}
