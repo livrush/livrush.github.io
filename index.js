@@ -25,9 +25,13 @@ $(document).ready(function() {
       console.log('horizontal placement is:', horizontalSlide);
       console.log('vertical placement is:', verticalSlide);
       console.groupEnd();
+      $('.fa-arrow-right.m').removeClass('m').addClass('c')
+    }
+    if (!horizontalSlide) {
+      $('.fa-arrow-left.c').removeClass('c').addClass('m')
     }
   });
-
+  
   $('#slide-right').click(function() {
     if (horizontalSlide * -1 < projects.length - 1) {
       horizontalSlide -= 1;
@@ -36,11 +40,15 @@ $(document).ready(function() {
         // transform: `translateX(-${horizontalSlide * 100}vw)`,
         transform: `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}vh)`,
       });
+      $('.fa-arrow-left.m').removeClass('m').addClass('c')
       console.group('right');
       console.log('horizontal placement is:', horizontalSlide);
       console.log('vertical placement is:', verticalSlide);
       console.groupEnd();
     };
+    if(horizontalSlide * -1 === projects.length - 1) {
+      $('.fa-arrow-right.c').removeClass('c').addClass('m');
+    }
   });
 
   // TODO: update style so this is worth having //
