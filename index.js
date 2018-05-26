@@ -43,17 +43,18 @@ $(document).ready(function() {
     };
   });
 
-  $('#slide-info').click(function() {
-    if (verticalSlide) verticalSlide += 1;
-    else verticalSlide -= 1;
+  // TODO: update style so this is worth having //
+  // $('#slide-info').click(function() {
+  //   if (verticalSlide) verticalSlide += 1;
+  //   else verticalSlide -= 1;
 
-    $('.projects-container').css({
-      transform: `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}vh)`,
-    });
-    console.group('info');
-    console.log('horizontal placement is:', horizontalSlide);
-    console.log('vertical placement is:', verticalSlide);
-    console.groupEnd();
-  });
+  //   $('.projects-container').css({
+  //     transform: `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}vh)`,
+  //   });
+  //   console.group('info');
+  //   console.log('horizontal placement is:', horizontalSlide);
+  //   console.log('vertical placement is:', verticalSlide);
+  //   console.groupEnd();
+  // });
 
 });
