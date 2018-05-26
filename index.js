@@ -9,6 +9,7 @@ const projects = [
   'pafiume-cast',
   'pafiume-colors',
   'browser-gimei',
+  'real-deal',
 ];
 
 const getScreenWidth = () => window.innerWidth;
