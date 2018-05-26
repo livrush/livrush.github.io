@@ -7,6 +7,10 @@
 .margin-bottom { margin-bottom: 3vh; }
 .margin-bottom { margin-bottom: 3vh; }
 .margin-left { margin-left: 3vh; }
+.margin-x {
+  margin-left: 1.5vh;
+  margin-right: 1.5vh;
+}
 
 .simple-column {
   display: flex;
