@@ -35,6 +35,14 @@ body {
     max-width: 50vmin;
 }
 
+.project-svg-preview {
+    height: 15vmin;
+    width: 15vmin;
+    max-height: 15vmin;
+    max-width: 15vmin;
+    margin: 3vmin;
+}
+
 .projects-container,
 .display-main,
 .display-main-section {
@@ -44,6 +52,7 @@ body {
 .display-main {
     display: flex;
     position: relative;
+    flex-flow: wrap;
 }
 .display-main.full {
     min-width: 100vw;
@@ -60,11 +69,15 @@ body {
     align-items: center;
     justify-content: center;
 }
+.display-main-section.half,
+.display-main-section.full {
+    min-height: 100%;
+}
 .display-main-section.half {
-    width: 50%;
+    min-width: 50vw;
 }
 .display-main-section.full {
-    width: 100%;
+    min-width: 100vw;
 }
 
 .display-main-section-header {
