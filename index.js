@@ -2,15 +2,15 @@ let horizontalSlide = 0;
 let verticalSlide = 0;
 let lastPanTimeStamp = 0;
 
-const projects = [
-  'fortune',
-  'kana-prac',
-  'ali-gle',
-  'pafiume-cast',
-  'pafiume-colors',
-  'browser-gimei',
-  'real-deal',
-];
+// const projects = [
+//   'fortune',
+//   'kana-prac',
+//   'ali-gle',
+//   'pafiume-cast',
+//   'pafiume-colors',
+//   'browser-gimei',
+//   'real-deal',
+// ];
 
 const getScreenWidth = () => window.innerWidth;
 
@@ -25,6 +25,8 @@ const slide = (horizontalSlide, verticalSlide) => {
 }
 
 $(document).ready(function() {
+  const projects = $('.project-display');
+
   $('#slide-left').click(function() {
     if (horizontalSlide) {
       horizontalSlide += 1;
@@ -40,7 +42,7 @@ $(document).ready(function() {
       $('.fa-arrow-left.c').removeClass('c').addClass('m')
     }
   });
-  
+
   $('#slide-right').click(function() {
     if (horizontalSlide * -1 < projects.length - 1) {
       horizontalSlide -= 1;
