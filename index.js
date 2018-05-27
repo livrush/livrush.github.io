@@ -1,15 +1,15 @@
 let horizontalSlide = 0;
 let verticalSlide = 0;
 let lastPanTimeStamp = 0;
-
+const keyPressMap = [];
 // const projects = [
 //   'fortune',
 //   'kana-prac',
+//   'real-deal',
 //   'ali-gle',
-//   'pafiume-cast',
 //   'pafiume-colors',
 //   'browser-gimei',
-//   'real-deal',
+  // 'pafiume-cast',
 // ];
 
 const getScreenWidth = () => window.innerWidth;
@@ -22,6 +22,12 @@ const slide = (horizontalSlide, verticalSlide) => {
     '-o-transform': `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}%)`,
     '-ms-transform': `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}%)`,
   });
+}
+
+const questionMarkPressed = () => {
+  const timeMax = Math.max(keyPressMap[16], keyPressMap[191]);
+  const timeMin = Math.min(keyPressMap[16], keyPressMap[191]);
+  return timeMax - timeMin < 1000;
 }
 
 $(document).ready(function() {
@@ -71,11 +77,20 @@ $(document).ready(function() {
   });
 
   $(window).on('keyup', (event) => {
-    console.log(event.key, event.keyCode);
+    console.log(event, event.key, event.which, event.keyCode);
     if (event.keyCode === 37) $('#slide-left').click();
     else if (event.keyCode === 38) $('#slide-info').click();
     else if (event.keyCode === 39) $('#slide-right').click();
     else if (event.keyCode === 40) $('#slide-info').click();
+  });
+
+  $(window).on('keydown', (event) => {
+    console.log(event, event.key, event.which, event.keyCode);
+    if (event.which === 16 || event.which === 191) {
+      console.log('come one.......')
+      keyPressMap[event.which] = event.timeStamp;
+      if (questionMarkPressed()) console.error('WIN');
+    }
   });
 
   // $(window).scroll(event => {
@@ -100,3 +115,4 @@ $(document).ready(function() {
     };
   });
 });
+
