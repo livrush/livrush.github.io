@@ -1,6 +1,8 @@
-.c { color: #55B7FF; }
-.m { color: #FF559D; }
-.y { color: #FFF796; }
+.c { color: #1F2673; }
+.c2 { color: #6783E2; }
+.m { color: #FFBAC6; }
+.m2 { color: #FFDEE4; }
+.y { color: #FFF; }
 
 .margin-top { margin-top: 3vh; }
 .margin-right { margin-right: 3vh; }
@@ -33,10 +35,10 @@
 }
 
 .project-svg {
-  height: 50vmin;
-  width: 50vmin;
-  max-height: 50vmin;
-  max-width: 50vmin;
+  height: 40vmin;
+  width: 40vmin;
+  max-height: 40vmin;
+  max-width: 40vmin;
 }
 
 .project-svg-preview {

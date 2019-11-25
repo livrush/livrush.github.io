@@ -6,10 +6,10 @@
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Pafiume-colors">
             <g id="diagonal" transform="translate(139.000000, 2.000000)">
-                <rect id="Rectangle" fill="#FF559D" x="1" y="150" width="50" height="50"></rect>
-                <path d="M51.2218298,139.757157 L40.9680936,150 L31,150 L51.0321729,129.967827 M50.7456019,120.254398 L21,150 L11,150 L50.9977892,110.002211 M51,100 L1,150 L1,139.999506 L40.9680936,100 L31,100 L1,130 L1,120 C14.3333333,106.666667 21,100 21,100 C21,100 17.6666667,100 11,100 L1,110" id="Path-10" stroke="#FF559D" stroke-width="4"></path>
-                <path d="M51.0106427,79.9787444 L30.9680936,100 L21,100 M51.0207898,59.9792102 L11,100 L1,100 M51,50 L41,50 L1.01422902,89.985771 M30.9680936,50 L21,50 L0.74831828,70.2516817" id="Path-10-Copy" stroke="#FF559D" stroke-width="4"></path>
-                <g id="Group-3" transform="translate(1.000000, 0.000000)" stroke="#FF559D">
+                <rect id="Rectangle" fill="#FFBAC6" x="1" y="150" width="50" height="50"></rect>
+                <path d="M51.2218298,139.757157 L40.9680936,150 L31,150 L51.0321729,129.967827 M50.7456019,120.254398 L21,150 L11,150 L50.9977892,110.002211 M51,100 L1,150 L1,139.999506 L40.9680936,100 L31,100 L1,130 L1,120 C14.3333333,106.666667 21,100 21,100 C21,100 17.6666667,100 11,100 L1,110" id="Path-10" stroke="#FFBAC6" stroke-width="4"></path>
+                <path d="M51.0106427,79.9787444 L30.9680936,100 L21,100 M51.0207898,59.9792102 L11,100 L1,100 M51,50 L41,50 L1.01422902,89.985771 M30.9680936,50 L21,50 L0.74831828,70.2516817" id="Path-10-Copy" stroke="#FFBAC6" stroke-width="4"></path>
+                <g id="Group-3" transform="translate(1.000000, 0.000000)" stroke="#FFBAC6">
                     <path d="M0,100 L50.5222723,100" id="Path-9" stroke-width="5"></path>
                     <path d="M0,151 L50.5024752,151" id="Path-9-Copy" stroke-width="5"></path>
                     <path d="M0,50 L50.5024752,50" id="Path-9-Copy-2" stroke-width="5"></path>
@@ -17,25 +17,25 @@
                 </g>
             </g>
             <g id="gradient" transform="translate(2.000000, 2.000000)">
-                <g id="Group-4" stroke="#FF559D">
+                <g id="Group-4" stroke="#FFBAC6">
                     <path d="M0,100 L50.5222723,100" id="Path-9" stroke-width="5"></path>
                     <path d="M0,151 L50.5024752,151" id="Path-9-Copy" stroke-width="5"></path>
                     <path d="M0,50 L50.5024752,50" id="Path-9-Copy-2" stroke-width="5"></path>
                     <path d="M-4.01456646e-13,5 L-4.01456646e-13,196 C-4.01186104e-13,198.209139 1.790861,200 4,200 L45,200 C47.7614237,200 50,197.761424 50,195 L50,5 C50,2.23857625 47.7614237,-8.57723936e-14 45,-8.52651283e-14 L5,-8.52651283e-14 C2.23857625,-8.4757863e-14 -4.01794823e-13,2.23857625 -4.01456646e-13,5 Z" id="Path-11" stroke-width="4"></path>
                 </g>
-                <rect id="Rectangle" fill="#FF559D" x="0" y="150" width="50" height="50"></rect>
-                <rect id="Rectangle-Copy" fill="#FF559D" opacity="0.66" x="0" y="100" width="50" height="50"></rect>
-                <rect id="Rectangle-Copy-2" fill="#FF559D" opacity="0.33" x="0" y="50" width="50" height="50"></rect>
+                <rect id="Rectangle" fill="#FFBAC6" x="0" y="150" width="50" height="50"></rect>
+                <rect id="Rectangle-Copy" fill="#FFBAC6" opacity="0.66" x="0" y="100" width="50" height="50"></rect>
+                <rect id="Rectangle-Copy-2" fill="#FFBAC6" opacity="0.33" x="0" y="50" width="50" height="50"></rect>
             </g>
             <g id="dots" transform="translate(71.000000, 2.000000)">
-                <g id="Group-2" stroke="#FF559D">
+                <g id="Group-2" stroke="#FFBAC6">
                     <path d="M0,100 L50.5222723,100" id="Path-9" stroke-width="5"></path>
                     <path d="M0,151 L50.5024752,151" id="Path-9-Copy" stroke-width="5"></path>
                     <path d="M0,50 L50.5024752,50" id="Path-9-Copy-2" stroke-width="5"></path>
                     <path d="M-4.01456646e-13,5 L-4.01456646e-13,196 C-4.01186104e-13,198.209139 1.790861,200 4,200 L45,200 C47.7614237,200 50,197.761424 50,195 L50,5 C50,2.23857625 47.7614237,-8.57723936e-14 45,-8.52651283e-14 L5,-8.52651283e-14 C2.23857625,-8.4757863e-14 -4.01794823e-13,2.23857625 -4.01456646e-13,5 Z" id="Path-11" stroke-width="4"></path>
                 </g>
-                <rect id="Rectangle" fill="#FF559D" x="0" y="150" width="50" height="50"></rect>
-                <g id="Group" transform="translate(0.000000, 103.000000)" fill="#FF559D">
+                <rect id="Rectangle" fill="#FFBAC6" x="0" y="150" width="50" height="50"></rect>
+                <g id="Group" transform="translate(0.000000, 103.000000)" fill="#FFBAC6">
                     <circle id="Oval-5" cx="7.5" cy="16.5" r="2.5"></circle>
                     <circle id="Oval-5-Copy" cx="17.5" cy="16.5" r="2.5"></circle>
                     <circle id="Oval-5-Copy-2" cx="27.5" cy="16.5" r="2.5"></circle>
@@ -72,7 +72,7 @@
                     <circle id="Oval-5-Copy-3" cx="32.5" cy="37.5" r="2.5"></circle>
                     <circle id="Oval-5-Copy-4" cx="42.5" cy="37.5" r="2.5"></circle>
                 </g>
-                <g id="Group-Copy-2" transform="translate(25.000000, 75.500000) scale(-1, 1) translate(-25.000000, -75.500000) translate(0.000000, 52.000000)" stroke="#FF559D">
+                <g id="Group-Copy-2" transform="translate(25.000000, 75.500000) scale(-1, 1) translate(-25.000000, -75.500000) translate(0.000000, 52.000000)" stroke="#FFBAC6">
                     <circle id="Oval-5" cx="7.5" cy="16.5" r="2.5"></circle>
                     <circle id="Oval-5-Copy" cx="17.5" cy="16.5" r="2.5"></circle>
                     <circle id="Oval-5-Copy-2" cx="27.5" cy="16.5" r="2.5"></circle>

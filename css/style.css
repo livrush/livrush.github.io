@@ -1,24 +1,24 @@
 html {
-    background: #55B7FF;
+    background: #1F2673;
 }
 body {
     margin: 0;
     font-family: futura;
 }
 header {
-    background: #55B7FF;
+    background: #1F2673;
     top: 0;
     z-index: 5;
 }
 main {
     overflow: hidden;
-    background: #FFF796;
+    background: #FFF;
     min-height: 100vh;
     padding: 0;
     display: flex;
 }
 footer {
-    /* background: #FF559D; */
+    /* background: #FFBAC6; */
     bottom: 0;
     z-index: 5;
 }
@@ -42,7 +42,7 @@ footer {
 
 .projects-container {
     display: flex;
-    transition: 1s;
+    transition: 0.5s;
 }
 .project-display {
     display: flex;
@@ -59,6 +59,10 @@ footer {
 .project-display-section-header {
     margin: 0;
     font-size: 7.5vh;
+    height: 16vh;
+}
+.project-display-section-header.slim {
+    height: 10vh;
 }
 .project-display-section,
 .project-display-section-header {
@@ -112,16 +116,13 @@ footer {
 @media (max-width: 768px) {
     .project-display {
         flex-direction: column-reverse;
-        justify-content: center;
+        justify-content: flex-end;
         min-width: 100vw;
     }
     .project-display-section{
-        height: 50vh;
+        height: 45vh;
         min-height: auto;
         min-width: 100%;
-    }
-    .project-display-section-header {
-        font-size: 6vh;
     }
 
     .septagon-spin {

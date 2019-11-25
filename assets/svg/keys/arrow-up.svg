@@ -4,7 +4,7 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
-        <g id="help" transform="translate(-44.000000, -53.000000)" stroke="#FF559D" stroke-width="3">
+        <g id="help" transform="translate(-44.000000, -53.000000)" stroke="#FFBAC6" stroke-width="3">
             <path d="M48,55 L74,55 C75.1045695,55 76,55.8954305 76,57 L76,83 C76,84.1045695 75.1045695,85 74,85 L48,85 C46.8954305,85 46,84.1045695 46,83 L46,57 C46,55.8954305 46.8954305,55 48,55 Z M61,63 L54,77 L68,77 L61,63 Z" id="Rectangle-5"></path>
         </g>
     </g>
