@@ -34,16 +34,17 @@ const keyPressMap = [];
 
 const getScreenWidth = () => window.innerWidth;
 
-const slide = (horizontalSlide, verticalSlide) => {
+const slide = (horizontal, vertical) => {
+  history.pushState(null, '', `?p=${horizontal}`);
   const projects = document.getElementsByClassName('projects-container');
   for (let key in projects) {
     if (!/^\d+$/.test(key)) continue;
     const project = projects[key];
-    project.style.transform = `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`;
-    project.style.webkitTransform = `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`;
-    project.style.MozTransform = `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`;
-    project.style.OTransform = `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`;
-    project.style.msTransform = `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`;
+    project.style.transform = `translate(${horizontal * -100}vw, ${vertical * -100}%)`;
+    project.style.webkitTransform = `translate(${horizontal * -100}vw, ${vertical * -100}%)`;
+    project.style.MozTransform = `translate(${horizontal * -100}vw, ${vertical * -100}%)`;
+    project.style.OTransform = `translate(${horizontal * -100}vw, ${vertical * -100}%)`;
+    project.style.msTransform = `translate(${horizontal * -100}vw, ${vertical * -100}%)`;
   }
 }
 
