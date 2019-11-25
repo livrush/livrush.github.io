@@ -72,19 +72,17 @@ footer {
 /* SEPTAGON */
 
 .septagon {
-    align-items: center;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    display: flex;
+    box-sizing: border-box;
     font-size: 3vh;
     height: 6vh;
-    justify-content: center;
+    padding: 1.5vh;
     width: 6vh;
 }
 .septagon.c { background-image: url("/assets/svg/septagon-c.svg"); }
 .septagon.m { background-image: url("/assets/svg/septagon-m.svg"); }
-.septagon.y { background-image: url("/assets/svg/septagon-y.svg"); }
+.septagon.y { background-image: url("/assets/svg/septagon-m.svg"); }
 .septagon-spin {
     width: 15vh;
     height: 15vh;
@@ -99,6 +97,9 @@ footer {
 }
 .septagon.bullet {
     margin-right: 2vh;
+}
+.septagon-icon {
+    height: 3vh;
 }
 
 /* ICONS */
