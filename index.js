@@ -1,4 +1,24 @@
-let horizontalSlide = 0;
+function getQueryVariable(window, variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split('&');
+  for (var i = 0; i < vars.length; i++) {
+    var pair = vars[i].split('=');
+    if (decodeURIComponent(pair[0]) === variable) {
+      return decodeURIComponent(pair[1]);
+    }
+  }
+}
+
+const startSlide = function(window) {
+  if (window.location.search) {
+    const P = Number(getQueryVariable(window, 'p'));
+    return P > 6 ? 6 : P;
+  }
+  return 0;
+}(window);
+console.log(typeof startSlide, startSlide)
+
+let horizontalSlide = startSlide;
 let verticalSlide = 0;
 let lastPanTimeStamp = 0;
 const keyPressMap = [];
@@ -16,11 +36,11 @@ const getScreenWidth = () => window.innerWidth;
 
 const slide = (horizontalSlide, verticalSlide) => {
   $('.projects-container').css({
-    transform: `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}%)`,
-    '-webkit-transform': `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}%)`,
-    '-moz-transform': `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}%)`,
-    '-o-transform': `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}%)`,
-    '-ms-transform': `translate(${horizontalSlide * 100}vw, ${verticalSlide * 100}%)`,
+    transform: `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`,
+    '-webkit-transform': `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`,
+    '-moz-transform': `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`,
+    '-o-transform': `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`,
+    '-ms-transform': `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`,
   });
 }
 
@@ -32,40 +52,34 @@ const questionMarkPressed = () => {
 
 $(document).ready(function() {
   const projects = $('.project-display');
+  slide(horizontalSlide, verticalSlide);
 
   $('#slide-left').click(function() {
     if (horizontalSlide) {
-      horizontalSlide += 1;
+      horizontalSlide -= 1;
       verticalSlide = 0;
       slide(horizontalSlide, verticalSlide);
       console.group('left');
       console.log('horizontal placement is:', horizontalSlide);
       console.log('vertical placement is:', verticalSlide);
       console.groupEnd();
-      // $('.fa-arrow-right.m').removeClass('m2').addClass('c2')
-    }
-    if (!horizontalSlide) {
-      // $('.fa-arrow-left.c').removeClass('c2').addClass('m2')
     }
   });
 
   $('#slide-right').click(function() {
     if (horizontalSlide * -1 < projects.length - 1) {
-      horizontalSlide -= 1;
+      horizontalSlide += 1;
       verticalSlide = 0;
       slide(horizontalSlide, verticalSlide);
-      // $('.fa-arrow-left.m').removeClass('m2').addClass('c2')
       console.group('right');
       console.log('horizontal placement is:', horizontalSlide);
       console.log('vertical placement is:', verticalSlide);
       console.groupEnd();
     };
-    if(horizontalSlide * -1 === projects.length - 1) {
-      // $('.fa-arrow-right.c').removeClass('c2').addClass('m2');
-    }
   });
 
   // TODO: update style so this is worth having //
+
   $('#slide-info').click(function() {
     if (verticalSlide) verticalSlide += 1;
     else verticalSlide -= 1;
@@ -76,12 +90,11 @@ $(document).ready(function() {
     console.groupEnd();
   });
 
-  $(window).on('keyup', (event) => {
-    console.log(event, event.key, event.which, event.keyCode);
+  window.addEventListener('keyup', (event) => {
+    // console.log(event, event.key, event.which, event.keyCode);
     if (event.keyCode === 37) $('#slide-left').click();
-    // else if (event.keyCode === 38) $('#slide-info').click();
     else if (event.keyCode === 39) $('#slide-right').click();
-    // else if (event.keyCode === 40) $('#slide-info').click();
+    // else if (event.keyCode === 38 || event.keyCode === 40) $('#slide-info').click();
   });
 });
 
