@@ -100,18 +100,18 @@ $(document).ready(function() {
   //   // }
   // });
 
-  $(window).hammer().bind('panleft', (event) => {
-    if (event.timeStamp - lastPanTimeStamp > 500) {
-      $('#slide-right').click();
-      lastPanTimeStamp = event.timeStamp;
-    }
-  });
+//   $(window).hammer().bind('panleft', (event) => {
+//     if (event.timeStamp - lastPanTimeStamp > 500) {
+//       $('#slide-right').click();
+//       lastPanTimeStamp = event.timeStamp;
+//     }
+//   });
 
-  $(window).hammer().bind('panright', (event) => {
-    if (event.timeStamp - lastPanTimeStamp > 500) {
-      $('#slide-left').click();
-      lastPanTimeStamp = event.timeStamp;
-    };
-  });
-});
+//   $(window).hammer().bind('panright', (event) => {
+//     if (event.timeStamp - lastPanTimeStamp > 500) {
+//       $('#slide-left').click();
+//       lastPanTimeStamp = event.timeStamp;
+//     };
+//   });
+// });
 
