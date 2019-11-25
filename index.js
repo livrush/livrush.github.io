@@ -83,19 +83,5 @@ $(document).ready(function() {
     else if (event.keyCode === 39) $('#slide-right').click();
     // else if (event.keyCode === 40) $('#slide-info').click();
   });
+});
 
-  // $(window).on('keydown', (event) => {
-  //   console.log(event, event.key, event.which, event.keyCode);
-  //   if (event.which === 16 || event.which === 191) {
-  //     keyPressMap[event.which] = event.timeStamp;
-  //     if (questionMarkPressed()) console.error('WIN');
-  //   }
-  // });
-
-  // $(window).scroll(event => {
-  //   console.log(event);
-  //   // if (event.timeStamp - lastPanTimeStamp > 500) {
-  //     $('#slide-right').click();
-  //     // lastPanTimeStamp = event.timeStamp;
-  //   // }
-  // });
