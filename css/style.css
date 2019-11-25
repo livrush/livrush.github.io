@@ -84,20 +84,20 @@ footer {
     padding: 1.5vh;
     width: 6vh;
 }
-.septagon.c { background-image: url("/assets/svg/septagon-c.svg"); }
-.septagon.m { background-image: url("/assets/svg/septagon-m.svg"); }
-.septagon.y { background-image: url("/assets/svg/septagon-m.svg"); }
+.septagon.c { background-image: url("/assets/svg/fan-c.svg"); }
+.septagon.m { background-image: url("/assets/svg/fan-m.svg"); }
+.septagon.y { background-image: url("/assets/svg/fan-m.svg"); }
 .septagon-spin {
     width: 15vh;
     height: 15vh;
-    animation: spin 14s infinite linear;
+    animation: spin 8s infinite linear;
 }
 .septagon-twirl {
     width: 15vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: float 2s infinite linear;
+    animation: float 4s infinite linear;
 }
 .septagon.bullet {
     margin-right: 2vh;

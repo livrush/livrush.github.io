@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="92" height="184">
   <g fill="none" fill-rule="evenodd">
     <path fill="#1F2673" d="M46 0C20.5949 0 0 20.5949 0 46h46V0z"/>
-    <path fill="#FFBAC6" d="M46 92c0-25.4051-20.5949-46-46-46v46h46z"/>
-    <path fill="#FFDEE4" d="M46 0c0 25.4051 20.5949 46 46 46V0H46z"/>
+    <path fill="#F98B9E" d="M46 92c0-25.4051-20.5949-46-46-46v46h46z"/>
+    <path fill="#FFBAC6" d="M46 0c0 25.4051 20.5949 46 46 46V0H46z"/>
     <path fill="#6783E2" d="M46 92c25.4051 0 46-20.5949 46-46H46v46zM46 184c0-25.4051-20.5949-46-46-46v46h46z"/>
-    <path fill="#FFDEE4" d="M46 92c-25.4051 0-46 20.5949-46 46h46V92z"/>
-    <path fill="#FFBAC6" d="M46 184c25.4051 0 46-20.5949 46-46H46v46z"/>
+    <path fill="#FFBAC6" d="M46 92c-25.4051 0-46 20.5949-46 46h46V92z"/>
+    <path fill="#F98B9E" d="M46 184c25.4051 0 46-20.5949 46-46H46v46z"/>
     <path fill="#1F2673" d="M46 92c0 25.4051 20.5949 46 46 46V92H46z"/>
   </g>
 </svg>
