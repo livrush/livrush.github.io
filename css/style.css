@@ -18,8 +18,9 @@ main {
     display: flex;
 }
 footer {
-    background: #FF559D;
+    /* background: #FF559D; */
     bottom: 0;
+    z-index: 5;
 }
 header,
 footer {
@@ -115,7 +116,7 @@ footer {
         min-width: 100vw;
     }
     .project-display-section{
-        height: 40vh;
+        height: 50vh;
         min-height: auto;
         min-width: 100%;
     }
