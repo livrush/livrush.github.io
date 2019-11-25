@@ -75,6 +75,7 @@ footer {
 
 /* SEPTAGON */
 
+
 .septagon {
     background-repeat: no-repeat;
     background-size: contain;
@@ -88,16 +89,24 @@ footer {
 .septagon.m { background-image: url("/assets/svg/fan-m.svg"); }
 .septagon.y { background-image: url("/assets/svg/fan-m.svg"); }
 .septagon-spin {
-    width: 15vh;
-    height: 15vh;
     animation: spin 8s infinite linear;
+    height: 15vh;
+    position: absolute;
+    width: 15vh;
 }
 .septagon-twirl {
-    width: 15vh;
-    display: flex;
+    animation: float 2s infinite linear;
     align-items: center;
+    display: flex;
     justify-content: center;
-    animation: float 4s infinite linear;
+    position: absolute;
+    width: 15vh;
+}
+.septagon-spin:first-child {
+    animation-delay: -2s;
+}
+.septagon-twirl:first-child {
+    animation-delay: -1s;
 }
 .septagon.bullet {
     margin-right: 2vh;
