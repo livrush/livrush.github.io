@@ -1,4 +1,4 @@
-(function() {
+(function(window) {
   function getQueryVariable(window, variable) {
     var query = window.location.search.substring(1);
     var vars = query.split('&');
@@ -10,17 +10,16 @@
     }
   }
 
-  const startSlide = function(window) {
+  const startSlide = (function(window) {
     if (window.location.search) {
       const P = Number(getQueryVariable(window, 'p'));
       return P > 6 ? 6 : P;
     }
     return 0;
-  }(window);
+  })(window);
 
   let horizontalSlide = startSlide;
   let verticalSlide = 0;
-  let lastPanTimeStamp = 0;
   const keyPressMap = [];
   // const projects = [
   //   'fortune',
@@ -31,8 +30,6 @@
   //   'browser-gimei',
     // 'pafiume-cast',
   // ];
-
-  const getScreenWidth = () => window.innerWidth;
 
   const slide = (horizontal, vertical) => {
     history.pushState(null, '', `?p=${horizontal}`);
@@ -46,12 +43,6 @@
       project.style.OTransform = `translate(${horizontal * -100}vw, ${vertical * -100}%)`;
       project.style.msTransform = `translate(${horizontal * -100}vw, ${vertical * -100}%)`;
     }
-  }
-
-  const questionMarkPressed = () => {
-    const timeMax = Math.max(keyPressMap[16], keyPressMap[191]);
-    const timeMin = Math.min(keyPressMap[16], keyPressMap[191]);
-    return timeMax - timeMin < 1000;
   }
 
   const projects = document.getElementsByClassName('project-display');
@@ -86,5 +77,4 @@
     else if (event.keyCode === 39) document.getElementById('slide-right').click();
     // else if (event.keyCode === 38 || event.keyCode === 40) $('#slide-info').click();
   });
-})();
-
+})(window);
