@@ -35,13 +35,16 @@ const keyPressMap = [];
 const getScreenWidth = () => window.innerWidth;
 
 const slide = (horizontalSlide, verticalSlide) => {
-  $('.projects-container').css({
-    transform: `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`,
-    '-webkit-transform': `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`,
-    '-moz-transform': `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`,
-    '-o-transform': `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`,
-    '-ms-transform': `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`,
-  });
+  const projects = document.getElementsByClassName('projects-container');
+  for (let key in projects) {
+    if (!/^\d+$/.test(key)) continue;
+    const project = projects[key];
+    project.style.transform = `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`;
+    project.style.webkitTransform = `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`;
+    project.style.MozTransform = `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`;
+    project.style.OTransform = `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`;
+    project.style.msTransform = `translate(${horizontalSlide * -100}vw, ${verticalSlide * -100}%)`;
+  }
 }
 
 const questionMarkPressed = () => {
@@ -67,7 +70,7 @@ $(document).ready(function() {
   });
 
   $('#slide-right').click(function() {
-    if (horizontalSlide * -1 < projects.length - 1) {
+    if (horizontalSlide < projects.length - 1) {
       horizontalSlide += 1;
       verticalSlide = 0;
       slide(horizontalSlide, verticalSlide);
