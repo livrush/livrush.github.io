@@ -33,6 +33,7 @@
 
   const slide = (horizontal, vertical) => {
     history.pushState(null, '', `?p=${horizontal}`);
+    if (!horizontal) history.pushState(null, '', '/');
     const projects = document.getElementsByClassName('projects-container');
     for (let key in projects) {
       if (!/^\d+$/.test(key)) continue;
