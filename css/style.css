@@ -4,6 +4,7 @@
 body {
     margin: 0;
     font-family: futura;
+    
 }
 header {
     background: #1F2673;
@@ -11,8 +12,11 @@ header {
     z-index: 5;
 }
 main {
+    background: #FFF repeat-x;
+    background-position: center 10vh;
+    background-size: 20vh;
+    background-image: url(/assets/fan-bg-x.svg);
     overflow: hidden;
-    background: #FFF;
     min-height: 100vh;
     padding: 0;
     display: flex;
@@ -115,6 +119,15 @@ footer {
 }
 
 @media (max-width: 768px) {
+    main {
+        background: #FFF repeat-y;
+        background-position: 5vh center;
+        background-size: 5vh;
+        background-image: url(/assets/fan-bg-y.svg);
+    }
+    footer {
+        padding: 0 15%;
+    }
     .project-display {
         flex-direction: column-reverse;
         justify-content: flex-end;
