@@ -7,16 +7,11 @@ html {
     --color-dark1: #1F2673;
     --color-light1: #6783E2;
     --color-dark2: #F98B9E;
-    --color-light-2: #FFBAC6;
+    --color-light2: #FFBAC6;
 }
 body {
     margin: 0;
     font-family: futura;
-}
-header {
-    background: #1F2673;
-    top: 0;
-    z-index: 5;
 }
 main {
     overflow: hidden;
@@ -28,7 +23,6 @@ footer {
     bottom: 0;
     z-index: 5;
 }
-header,
 footer {
     height: 10vh;
     display: flex;
@@ -37,7 +31,6 @@ footer {
     justify-content: center;
     align-items: center;
 }
-header,
 main,
 footer {
     width: 100vw;
@@ -74,35 +67,51 @@ footer {
 .project-display-section-header {
     font-size: 6vh;
 }
-.project-display-information .project-link {
-    color: var(--color-light-2);
+.project-display .project-display-section-header {
+    color: var(--color-dark1);
+}
+.project-display:nth-child(even) .project-display-section-header {
+    color: var(--color-dark2);
+}
+.project-display .project-link {
+    color: var(--color-light2);
 }
 .project-display:nth-child(even) .project-link {
     color: var(--color-light1);
 }
 
-/* SEPTAGON */
+/* SHAPE */
 
-
-.septagon {
+.shape {
     background-repeat: no-repeat;
     background-size: contain;
     box-sizing: border-box;
     font-size: 3vh;
     height: 6vh;
-    padding: 1.5vh;
+    padding: 2vh 0 0 1vh;
     width: 6vh;
 }
-.septagon.c { background-image: url("/assets/svg/fan-c.svg"); }
-.septagon.m { background-image: url("/assets/svg/fan-m.svg"); }
-.septagon.y { background-image: url("/assets/svg/fan-m.svg"); }
-.septagon-spin {
+.shape.bullet {
+    margin-right: 2vh;
+}
+
+.shape-icon {
+    height: 3vh;
+}
+.project-display .shape.bullet {
+    background-image: url("/assets/svg/fan-m.svg");
+}
+.project-display:nth-child(even) .shape.bullet {
+    background-image: url("/assets/svg/fan-c.svg");
+}
+
+.shape-spin {
     animation: spin 8s infinite linear;
     height: 15vh;
     position: absolute;
     width: 15vh;
 }
-.septagon-twirl {
+.shape-twirl {
     animation: float 2s infinite linear;
     align-items: center;
     display: flex;
@@ -110,17 +119,11 @@ footer {
     position: absolute;
     width: 15vh;
 }
-.septagon-spin:first-child {
+.shape-spin:first-child {
     animation-delay: -2s;
 }
-.septagon-twirl:first-child {
+.shape-twirl:first-child {
     animation-delay: -1s;
-}
-.septagon.bullet {
-    margin-right: 2vh;
-}
-.septagon-icon {
-    height: 3vh;
 }
 
 /* ICONS */
@@ -128,7 +131,7 @@ footer {
 .icons {
     display: flex;
 }
-.icons > .septagon {
+.icons > .shape {
     margin: 2.5vh;
     height: 6vh;
     width: 6vh;
@@ -156,11 +159,11 @@ footer {
         min-width: 100%;
     }
 
-    .septagon-spin {
+    .shape-spin {
         height: 9vh;
         width: 9vh;
     }
-    .septagon-twirl {
+    .shape-twirl {
         width: 9vh;
     }
 
