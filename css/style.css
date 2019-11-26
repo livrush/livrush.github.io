@@ -4,10 +4,10 @@ html {
     background-position: center 10vh;
     background-repeat: repeat-x;
     background-size: 20vh;
-    --color-dark1: #1F2673;
-    --color-light1: #6783E2;
-    --color-dark2: #F98B9E;
-    --color-light2: #FFBAC6;
+    --color-1dark: #1F2673;
+    --color-1light: #6783E2;
+    --color-2dark: #F98B9E;
+    --color-2light: #FFBAC6;
 }
 body {
     margin: 0;
@@ -35,6 +35,11 @@ main,
 footer {
     width: 100vw;
     box-sizing: border-box;
+}
+
+.intro-header {
+    margin: 0;
+    font-size: 7.5vh;
 }
 
 /* BASIC SKELETON */
@@ -68,16 +73,16 @@ footer {
     font-size: 6vh;
 }
 .project-display .project-display-section-header {
-    color: var(--color-dark1);
+    color: var(--color-1dark);
 }
 .project-display:nth-child(even) .project-display-section-header {
-    color: var(--color-dark2);
+    color: var(--color-2dark);
 }
 .project-display .project-link {
-    color: var(--color-light2);
+    color: var(--color-2light);
 }
 .project-display:nth-child(even) .project-link {
-    color: var(--color-light1);
+    color: var(--color-1light);
 }
 
 /* SHAPE */
@@ -98,9 +103,11 @@ footer {
 .shape-icon {
     height: 3vh;
 }
+.shape.m,
 .project-display .shape.bullet {
     background-image: url("/assets/svg/fan-m.svg");
 }
+.shape.c,
 .project-display:nth-child(even) .shape.bullet {
     background-image: url("/assets/svg/fan-c.svg");
 }
@@ -166,9 +173,8 @@ footer {
     .shape-twirl {
         width: 9vh;
     }
-
-    .icons {
+    /* .icons {
         justify-content: space-between;
         width: 100%;
-    }
+    } */
 }
