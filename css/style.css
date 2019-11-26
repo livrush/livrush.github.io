@@ -129,7 +129,7 @@ footer {
 @media (max-width: 768px) {
     html {
         background-image: url(/assets/fan-bg-y.svg);
-        background-position: 10vw center;
+        background-position: 5vw center;
         background-repeat: repeat-y;
         background-size: 10vw;
     }
