@@ -89,6 +89,15 @@ footer {
     font-size: 3.5vh;
     margin: 0;
 }
+.project-responsibilities {
+    margin: 0;
+}
+.project-display .project-responsibilities {
+    color: var(--color-1light);
+}
+.project-display:nth-child(even) .project-responsibilities {
+    color: var(--color-2light);
+}
 .project-display .project-link {
     color: var(--color-2light);
 }
@@ -112,8 +121,8 @@ footer {
 .shape-icon {
     height: 2.5vh;
     position: absolute;
-    bottom: 0.5rem;
-    left: 0.5rem;
+    bottom: 1vh;
+    left: 1vh;
 }
 .shape.m,
 .project-display .shape.bullet {
