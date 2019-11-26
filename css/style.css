@@ -61,17 +61,15 @@ footer {
     min-width: 50vw;
 }
 .project-display-information {
+    box-sizing: border-box;
     height: 40vh;
     width: 40vh;
-    padding-top: 5vh;
+    padding-top: 2.5vh;
 }
 .project-display-section-header {
     margin: 0;
     font-size: 5vh;
-    height: 16vh;
-}
-.project-display-section-header.slim {
-    height: 10vh;
+    height: 15vh;
 }
 .project-display .project-display-section-header {
     color: var(--color-1dark);
@@ -124,11 +122,9 @@ footer {
     bottom: 1vh;
     left: 1vh;
 }
-.shape.m,
 .project-display .shape.bullet {
     background-image: url("/assets/svg/fan-m.svg");
 }
-.shape.c,
 .project-display:nth-child(even) .shape.bullet {
     background-image: url("/assets/svg/fan-c.svg");
 }
