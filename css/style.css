@@ -1,10 +1,13 @@
-/* html {
-    background: #1F2673;
-} */
+html {
+    background: #FFF;
+    background-image: url(/assets/fan-bg-x.svg);
+    background-position: center 10vh;
+    background-repeat: repeat-x;
+    background-size: 20vh;
+}
 body {
     margin: 0;
     font-family: futura;
-    
 }
 header {
     background: #1F2673;
@@ -12,10 +15,6 @@ header {
     z-index: 5;
 }
 main {
-    background: #FFF repeat-x;
-    background-position: center 10vh;
-    background-size: 20vh;
-    background-image: url(/assets/fan-bg-x.svg);
     overflow: hidden;
     min-height: 100vh;
     padding: 0;
@@ -128,14 +127,14 @@ footer {
 }
 
 @media (max-width: 768px) {
-    main {
-        background: #FFF repeat-y;
-        background-position: 5vh center;
-        background-size: 5vh;
+    html {
         background-image: url(/assets/fan-bg-y.svg);
+        background-position: 10vw center;
+        background-repeat: repeat-y;
+        background-size: 10vw;
     }
     footer {
-        padding: 0 15%;
+        padding: 0 20%;
     }
     .project-display {
         flex-direction: column-reverse;
@@ -143,7 +142,7 @@ footer {
         min-width: 100vw;
     }
     .project-display-section{
-        height: 45vh;
+        height: 40vh;
         min-height: auto;
         min-width: 100%;
     }
