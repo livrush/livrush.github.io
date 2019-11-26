@@ -199,6 +199,10 @@ footer {
         background-repeat: repeat-y;
         background-size: 5vw;
     }
+    main {
+        overflow: hidden;
+        min-height: auto;
+    }
     footer {
         padding: 0 20%;
     }
@@ -227,8 +231,4 @@ footer {
     .shape-twirl {
         width: 9vh;
     }
-    /* .icons {
-        justify-content: space-between;
-        width: 100%;
-    } */
 }
