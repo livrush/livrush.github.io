@@ -14,24 +14,8 @@
   margin-right: 3vh;
 }
 
-.simple-column {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.simple-row {
-  display: flex;
-  align-items: center;
-}
-
 .absolute {
   position: absolute;
-}
-
-.link {
-  font-size: 4vh;
-  margin: 0;
 }
 
 .project-svg {
