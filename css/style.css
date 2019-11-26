@@ -39,7 +39,7 @@ footer {
 
 .intro-header {
     margin: 0;
-    font-size: 7.5vh;
+    font-size: 5vh;
 }
 
 /* BASIC SKELETON */
@@ -60,23 +60,34 @@ footer {
     min-height: 100%;
     min-width: 50vw;
 }
+.project-display-information {
+    height: 40vh;
+    width: 40vh;
+    padding-top: 5vh;
+}
 .project-display-section-header {
     margin: 0;
-    font-size: 7.5vh;
+    font-size: 5vh;
     height: 16vh;
 }
 .project-display-section-header.slim {
     height: 10vh;
-}
-.project-display-section,
-.project-display-section-header {
-    font-size: 6vh;
 }
 .project-display .project-display-section-header {
     color: var(--color-1dark);
 }
 .project-display:nth-child(even) .project-display-section-header {
     color: var(--color-2dark);
+}
+.project-bullet {
+    align-items: center;
+    display: flex;
+    height: 5vh;
+    margin-top: 3vh;
+}
+.project-link {
+    font-size: 3.5vh;
+    margin: 0;
 }
 .project-display .project-link {
     color: var(--color-2light);
@@ -90,18 +101,19 @@ footer {
 .shape {
     background-repeat: no-repeat;
     background-size: contain;
-    box-sizing: border-box;
-    font-size: 3vh;
-    height: 6vh;
-    padding: 2vh 0 0 1vh;
-    width: 6vh;
+    height: 5vh;
+    width: 5vh;
 }
 .shape.bullet {
     margin-right: 2vh;
+    position: relative;
 }
 
 .shape-icon {
-    height: 3vh;
+    height: 2.5vh;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
 }
 .shape.m,
 .project-display .shape.bullet {
@@ -143,6 +155,12 @@ footer {
     height: 6vh;
     width: 6vh;
     cursor: pointer;
+}
+
+/* FOOTER */
+.slide-img {
+    height: 5vh;
+    width: 5vh;
 }
 
 @media (max-width: 768px) {
