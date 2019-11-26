@@ -42,6 +42,25 @@ footer {
     font-size: 5vh;
 }
 
+/* BIO */
+
+.bio-text-container {
+    height: 45vh;
+    line-height: 1.5;
+    overflow: scroll;
+}
+.bio-header,
+.bio-text {
+    margin: 0;
+    margin-bottom: 2.5vh;
+}
+.bio-accent {
+    color: var(--color-1light);
+    display: inline;
+    text-space-collapse: discard;
+    /* float:left; */
+}
+
 /* BASIC SKELETON */
 
 .projects-container {
@@ -65,6 +84,10 @@ footer {
     height: 40vh;
     width: 40vh;
     padding-top: 2.5vh;
+}
+.project-display-information.bio {
+    padding-top: 0;
+    width: 80%;
 }
 .project-display-section-header {
     margin: 0;
@@ -174,7 +197,7 @@ footer {
         background-image: url(/assets/fan-bg-y.svg);
         background-position: 5vw center;
         background-repeat: repeat-y;
-        background-size: 10vw;
+        background-size: 5vw;
     }
     footer {
         padding: 0 20%;
@@ -184,10 +207,17 @@ footer {
         justify-content: flex-end;
         min-width: 100vw;
     }
-    .project-display-section{
+    .project-display-section {
         height: 40vh;
         min-height: auto;
         min-width: 100%;
+    }
+    .project-display-information.bio {
+        padding-left: 7.5vh;
+        padding-top: 5vh;
+    }
+    .bio-text-container {
+        height: 75vh;
     }
 
     .shape-spin {
